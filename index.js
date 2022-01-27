@@ -20,7 +20,7 @@ const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology:
 async function run() {
     try {
         await client.connect();
-        const database = client.db("World_Travels");
+        const database = client.db("Explore_travel");
         const travelsCollection = database.collection("travels");
         const usersCollection = database.collection('users');
         console.log('connecting')
@@ -140,7 +140,6 @@ async function run() {
 
 run().catch(console.dir);
 // ------------------------------------------------------
-
 
 app.get('/', (req, res) => {
     res.send('Travels World running');
